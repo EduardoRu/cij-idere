@@ -21,19 +21,19 @@ class DatabaseSeeder extends Seeder
         DB::table('users')->insert([
             'name_admin' => 'Alfredo Alvarez Haro',
             'email' => 'AAlvarez@gmail.com',
-            'password' => bcrypt('CIJAAH1234')
+            'password' => bcrypt('')
         ]);
 
         DB::table('users')->insert([
             'name_admin' => 'Pedro Rodriguez de la Torre',
             'email' => 'PRodriguez@gmail.com',
-            'password' => bcrypt('CIJPRT5678')
+            'password' => bcrypt('')
         ]);
         
         DB::table('users')->insert([
             'name_admin' => 'Asistente CIJ',
             'email' => 'ACIJ@gmail.com',
-            'password' => bcrypt('ACIJ678')
+            'password' => bcrypt('')
         ]);
     }
 }
