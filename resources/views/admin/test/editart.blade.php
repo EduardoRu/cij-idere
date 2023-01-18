@@ -86,7 +86,7 @@
                     </div>
                 </div>
                 <hr>
-                <div hidden>{{$x=0;}}</div>
+                <div hidden>{{$x=0}}</div>
                 <div class="container">
                     <div id="grupos">
                         @foreach ($grupos as $g)

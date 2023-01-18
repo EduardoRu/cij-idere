@@ -121,8 +121,9 @@ class encuestas extends Controller
         $x = 0;
 
         if($encuesta->fecha_final <= $request->ff){
-
-            DB::update(DB::raw('UPDATE clave_alumnos SET estado_clave = "habil" WHERE idgrupo ON  '));
+            for($i=0; $i<sizeof($grupos);$i++){
+                DB::update(DB::raw('UPDATE clave_alumnos SET estado_clave = "habil" WHERE idgrupo ='.$grupos[$i]["idgrupos"]));
+            }
         }
 
 
