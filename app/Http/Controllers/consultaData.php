@@ -228,7 +228,7 @@ class consultaData extends Controller
                 DB::raw('SUM(JSON_EXTRACT(resultados.consumo_sustancias,"$.Tabaco")) AS "CST"'),
                 DB::raw('SUM(JSON_EXTRACT(resultados.consumo_sustancias,"$.Alcohol")) AS "CSA"'),
                 DB::raw('SUM(JSON_EXTRACT(resultados.consumo_sustancias,"$.Otras_drogas")) AS "CSO"'),
-                DB::raw('SUM(JSON_EXTRACT(resultados.participacion_acciones_preventivas) AS "PAP"'))
+                DB::raw('SUM(resultados.participacion_acciones_preventivas) AS "PAP"'))
             ->join('clave_alumnos','resultados.idclave_alumno','=','clave_alumnos.idclave_alumno')
             ->join('grupos','clave_alumnos.idgrupo','=','grupos.idgrupos')
             ->join('encuestas','grupos.idencuesta','=','encuestas.idencuesta')
